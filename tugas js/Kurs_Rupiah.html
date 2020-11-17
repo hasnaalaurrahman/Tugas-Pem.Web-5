@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>kurs_rupiah</title>
+        <meta charset="UTF-8">
+        <script language="JavaScript">
+            function hasil(){
+                let nominal = document.getElementById("inputnilai").value;
+                let matauang = document.getElementById("valas").value;
+                console.log(nominal+'x'+matauang+'='+nominal*matauang);
+                document.getElementById("IDR").value=(nominal*matauang); 
+            }
+        </script>
+    </head>
+    <body>
+        <form id="fr">
+            <fieldset style="background-color: rgba(220, 220, 220, 0.938);">
+                <legend><h3>Kurs Rupiah - Mata Uang Asing</h3></legend>
+                <table border="1" style="background-color: rgba(233, 150, 122, 0.815);">
+                    <thread>
+                        <tr>
+                            <th>Masukkan Nominal</th><th>Valas</th><th>Nilai Rupiah</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" id="inputnilai" value="" required></td>
+                            <td>
+                                <select id="valas" onchange="hasil()" required>
+                                    <option value="0">--pilih--</option>
+                                    <option value="9915">Dollar US</option>
+                                    <option value="13472">Dollar Singapore</option>
+                                    <option value="874">Ringgit Malaysia</option>
+                                    <option value="120">Yen Jepang</option>
+                                    <option value="15888">Euro</option>
+                                    <option value="3592">Riyal Arab Saudi</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text" id="IDR">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
+<!--Referensi:https://www.kursuswebsite.org/menampilkan-value-select-menggunakan-onchange/-->
