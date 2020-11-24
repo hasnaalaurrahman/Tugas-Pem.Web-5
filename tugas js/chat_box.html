@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>chat_massage</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .tabel{
+                position: fixed;
+                right: 0px;
+                bottom: 0px; 
+            }
+        </style>
+        <script language="JavaScript"> 
+            function kirim_pesan() {
+                let pesan = document.getElementById("pesan").value;
+                document.getElementById("hasil").innerHTML += pesan+"<br/>";
+                document.getElementById("pesan").value= "";
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1" class="tabel">
+            <thread>
+                <tr>
+                    <th type="text" id="hasil" style="width: 500px; height: 300px; vertical-align: top; text-align: left;" ></th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" id="pesan" value="" placeholder="Masukkan pesan" style="width: 400px;">
+                        <button type="submit" id="kirim" onclick="kirim_pesan()" >kirim pesan</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
