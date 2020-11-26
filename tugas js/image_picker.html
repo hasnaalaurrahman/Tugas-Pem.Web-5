@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>image_picker</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function hasil(){
+                let Bunga = document.getElementById("bunga").value;
+                console.log("Bunga pilihan anda: " + Bunga);
+                document.getElementById("gambar").src="image/"+Bunga+".jpg";
+                alert("Anda memilih gambar bunga"+Bunga+".jpg");
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <fieldset >
+                <legend style="text-align: center;"><h3>Image_Picker</h3></legend>
+                <table>
+                    <thread>
+                        <tr>
+                            <th>
+                                <select id="bunga" onchange="hasil()" required>
+                                    <option value="0">--pilih--</option>
+                                    <option value="Anggrek">Anggrek</option>
+                                    <option value="Azalea">Azalea</option>
+                                    <option value="BabyBreath">BabyBreath</option>
+                                    <option value="Calendula">Calendula</option>
+                                    <option value="Daisy">Daisy</option>
+                                    <option value="Lily">Lily</option>
+                                    <option value="Phlox">Phlox</option>
+                                    <option value="SweetPea">SweetPea</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="" alt="" id="gambar" style="width: 300px;"/>
+                            </td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </fieldset>
+        </form>                          
+    </body>
+
+    
+  
