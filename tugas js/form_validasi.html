@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>form_validasi</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <script language="JavaScript">
+            function validasi(){
+                let Nama = document.forms["fr"]["nama"].value;
+                let Email = document.forms["fr"]["email"].value;
+                let Waktu = document.forms["fr"]["waktu"].value;
+                let Tujuan = document.forms["fr"]["tujuan"].value;
+                let Tiket = document.forms["fr"]["jumlah"].value;
+                
+                if (Nama == "" || Email == "" || Waktu == "" || Tujuan == "" || Tiket == ""){
+                    alert ("Data tidak valid. Silakan periksa kembali");
+                    return false;
+                }else if (Tiket > 10){
+                    alert("Data melebihi batas maksimun");
+                    return false;
+                }else if (Nama.length > 30){
+                    return false;
+                }else {
+                    else{
+                        document.getElementById('namapembeli').innerHTML = 'Name : ' + Nama + '<br>';
+                        document.getElementById('emailpembeli').innerHTML = 'Email : ' + Email + '<br>';
+                        document.getElementById('waktukeberangkatan').innerHTML = 'Waktu Keberangkatan : ' + Waktu + '<br>';
+                        document.getElementById('destinasi').innerHTML = 'Tujuan : ' + Tujuan + '<br>';
+                        document.getElementById('jumlahtiket').innerHTML = 'Jumlah Tiket : ' + Tiket + '<br>';
+            }
+                }
+
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form class="fr" >
+            <fieldset>
+                <legend>E-TICKET</legend>
+                <ul>
+                    <li>
+                        <label for="nama">Nama:</label>
+                        <div>
+                            <input type="text" class="nama" placeholder="masukkan nama" value="" maxlength="30">
+                        </div>
+                    </li>
+                    <li>
+                        <label for="e-mail">E-mail:</label>
+                        <div>
+                            <input type="email" class="e-mail" placeholder="masukkan alamat e-mail" value="" >
+                        </div>
+                    </li>
+                    <li>
+                        <label for="waktu">Waktu Keberangkatan:</label>
+                        <div>
+                            <input type="time" class="waktu" placeholder="masukkan waktu keberangkatan" value="" >
+                        </div>
+                    </li>
+                    <li>
+                        <label for="tujuan">Tujuan:</label>
+                        <div>
+                            <input type="text" class="tujuan" placeholder="masukkan tujuan" value="" >
+                        </div>
+                    </li>
+                    <li>
+                        <label for="jumlah">Jumlah Tiket:</label>
+                        <div>
+                            <input type="number" class="jumlah" placeholder="masukkan jumlah tiket" value="" >
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <button type="submit" id="submit" onsubmit="return validasi()">Submit</button> 
+                </div>
+            </fieldset>
+        </form>
+        <hr/>
+        <div>
+            <p id="namapembeli"></p>
+            <p id="emailpembeli"></p>
+            <p id="waktukeberangkatan"></p>
+            <p id="destinasi"></p>
+            <p id="jumlahtiket"></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>login</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script language="JavaScript" src="otentikasi.js"></script>
+    </head>
+    <body>
+        <center>
+            <form id="login" method="POST">
+                <fieldset>
+                    <legend><h2>Log In Authentication</h2></legend>
+                    <table>
+                        <tr>
+                            <td>Username</td>
+                            <td>:</td>
+                            <td><input type="text" id="username" placeholder="username" value="" ></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>:</td>
+                            <td><input type="password" id="password" placeholder="password" value="" ></td>
+                        </tr>
+                    </table>
+                    <button type="submit" id="submit" onsubmit="otentikasi()">log in</button>
+                </fieldset>
+        </form>
+        </center>
+        
+    </body>
